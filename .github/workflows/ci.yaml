@@ -86,15 +86,15 @@ jobs:
             do gh release upload "${{steps.release-status.outputs.tag}}" $file
           done
 
-      - if: steps.release-status.outputs.released == 'true'
-        name: Release to Test PyPI
-        id: test-pypi-release
-        env:
-          TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
-        run: |
-          poetry config repositories.test-pypi https://test.pypi.org/legacy/
-          poetry config pypi-token.test-pypi $TEST_PYPI_TOKEN
-          poetry publish -r test-pypi -u __token__
+#      - if: steps.release-status.outputs.released == 'true'
+#        name: Release to Test PyPI
+#        id: test-pypi-release
+#        env:
+#          TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+#        run: |
+#          poetry config repositories.test-pypi https://test.pypi.org/legacy/
+#          poetry config pypi-token.test-pypi $TEST_PYPI_TOKEN
+#          poetry publish -r test-pypi -u __token__
 
       - if: steps.release-status.outputs.released == 'true'
         name: Release to PyPI
