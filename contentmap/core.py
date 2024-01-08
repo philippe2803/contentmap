@@ -16,3 +16,6 @@ class ContentMapCreator:
             "INSERT INTO contentmap VALUES (:url, :content)",
             self.contents
         )
+
+    def test_release_dummy(self):
+        return 1
