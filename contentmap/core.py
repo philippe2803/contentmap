@@ -41,13 +41,3 @@ class ContentMapCreator:
             self.contents
         )
         self.db.commit()
-
-
-if __name__ == "__main__":
-    from datetime import datetime
-
-    start = datetime.now()
-    contentmap = ContentMapCreator(contents=[
-        {"url": "https://adrianbeaumont.net", "content": "Hello world"}
-    ])
-    contentmap.build()

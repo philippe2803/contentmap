@@ -55,15 +55,3 @@ class SitemapToContentDatabase:
         except aiohttp.ClientConnectionError as e:
             logging.error(f"Error while fetching {url}: {e.__repr__}")
             return None
-
-
-if __name__ == "__main__":
-    from datetime import datetime
-
-    start = datetime.now()
-    contentmap = SitemapToContentDatabase("https://adrianbeaumont.net/sitemap-1.xml", concurrency=20)
-    contents = contentmap.load()
-    end = datetime.now()
-    print(end - start)
-    print(contents)
-
