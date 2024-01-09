@@ -17,6 +17,6 @@ def test_generator():
 def test_schema():
     database = ContentMapCreator(data)
     database.build()
-    query = database.cursor.execute("SELECT count(1) FROM contentmap")
+    query = database.cursor.execute("SELECT count(1) FROM content")
     assert query.fetchone()[0] == 2
 
