@@ -10,6 +10,10 @@ packages = [{include = "contentmap"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.31.0"
+tqdm = "^4.66.1"
+lxml = "4.9.4"
+trafilatura = "^1.6.4"
+aiohttp = "^3.9.1"
 
 
 [tool.poetry.group.test.dependencies]
