@@ -2,6 +2,19 @@
 
 
 
+## v0.2.0 (2024-01-09)
+
+### Feature
+
+* feat: Add content map creator from XML sitemap (#3)
+
+* feat: Add content map creator from XML sitemap
+
+* Removing the if name snippets
+
+* fix: column name in test ([`ccbb8fb`](https://github.com/philippe2803/contentmap/commit/ccbb8fbf54faedb92f85ff0dda065c758801f6cb))
+
+
 ## v0.1.1 (2024-01-08)
 
 ### Documentation
