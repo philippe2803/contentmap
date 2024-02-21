@@ -8,5 +8,6 @@ def remove_created_database_after_test():
     # Setup logic
     yield   # this is where the testing happens
     # Teardown logic
-    os.remove("contentmap.db")
+    if os.path.exists("contentmap.db"):
+        os.remove("contentmap.db")
 
