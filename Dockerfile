@@ -13,6 +13,9 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install
 
+RUN python3 -c 'from sentence_transformers import SentenceTransformer; embedder = SentenceTransformer("all-MiniLM-L6-v2")'
+
+
 ADD . /app
 
 CMD ["pytest", "./tests"]

@@ -1,5 +1,7 @@
 import pytest
 import os
+import os.path as op
+import logging
 
 
 @pytest.fixture(autouse=True)
@@ -8,6 +10,9 @@ def remove_created_database_after_test():
     # Setup logic
     yield   # this is where the testing happens
     # Teardown logic
-    if os.path.exists("contentmap.db"):
-        os.remove("contentmap.db")
+
+    contentmap_db_path = op.join(op.dirname(__file__), "contentmap.db")
+    if op.exists(contentmap_db_path):
+        logging.info('Destroying mock sqlite content instance')
+        os.remove(contentmap_db_path)
 
