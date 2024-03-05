@@ -5,10 +5,7 @@ dataset already created.
 import sqlite3
 from typing import Optional
 
-import sqlite_vss
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings.sentence_transformer import (
     SentenceTransformerEmbeddings,
 )
@@ -59,8 +56,10 @@ class ContentMapVSS:
         rows = result.fetchall()
 
         # based on Anyscale analysis (https://t.ly/yjgxQ), it looks like the
-        # sweet spot is 700 chunk size and 50 chunk overlap
-        text_splitter = CharacterTextSplitter(chunk_size=700, chunk_overlap=50)
+        # sweet spot is 700 chunk size and 50 chunk overlap.
+        text_splitter = CharacterTextSplitter(
+            chunk_size=700, chunk_overlap=50, separator="."
+        )
 
         texts = []
         metadatas = []
@@ -73,4 +72,9 @@ class ContentMapVSS:
         return texts, metadatas
 
     def similarity_search(self, *args, **kwargs):
-        return self.vss.similarity_search(*args, **kwargs)
+        data = self.vss.similarity_search(*args, **kwargs)
+        rag_results = []
+        for doc in data:
+            item = {"content": doc.page_content, "url": doc.metadata['url']}
+            rag_results.append(item)
+        return rag_results

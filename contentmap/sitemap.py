@@ -12,19 +12,21 @@ from contentmap.core import ContentMapCreator
 
 class SitemapToContentDatabase:
 
-    def __init__(self, sitemap_url, seconds_timeout=10, concurrency=None):
+    def __init__(self, sitemap_url, seconds_timeout=10, concurrency=None,
+                 include_vss=False):
         self.sitemap_url = sitemap_url
         self.semaphore = asyncio.Semaphore(concurrency) if concurrency is not None else None
         self.timeout = aiohttp.ClientTimeout(
             sock_connect=seconds_timeout,
             sock_read=seconds_timeout
         )
+        self.include_vss = include_vss
 
-    def load(self):
+    def build(self):
         urls = self.get_urls()
         loop = asyncio.get_event_loop()
         contents = loop.run_until_complete(self.get_contents(urls))
-        cm = ContentMapCreator(contents)
+        cm = ContentMapCreator(contents, include_vss=self.include_vss)
         cm.build()
 
     def get_urls(self):
