@@ -18,4 +18,4 @@ RUN python3 -c 'from sentence_transformers import SentenceTransformer; embedder 
 
 ADD . /app
 
-CMD ["pytest", "./tests"]
+# CMD ["pytest", "./tests"]
