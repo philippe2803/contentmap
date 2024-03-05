@@ -45,6 +45,6 @@ class TestVssTablesCreation:
         cm_vss.load()
         data = cm_vss.similarity_search(query="who is Mistral ai company?", k=2)
         assert len(data) == 2
-        metadatas = [doc.metadata for doc in data]
-        for meta in metadatas:
-            assert meta.get("url") == "https://philippeoger.com/pages/ai-scene-in-europe-last-week/"
+        urls = [doc["url"] for doc in data]
+        for url in urls:
+            assert url == "https://philippeoger.com/pages/ai-scene-in-europe-last-week/"
