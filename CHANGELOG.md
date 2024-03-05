@@ -2,6 +2,23 @@
 
 
 
+## v0.4.0 (2024-03-05)
+
+### Feature
+
+* feat: Add sqlite-vss for vector search similariy capabilities
+
+* feat: Add sqlite-vss to add simioary search to sqlite
+
+* feat: Integrate with langchain for sqlite-vss implementation
+
+* feat: VSS now fully working
+
+* fix: remove unsused file
+
+* fix: Adjust unit test for similarity search ([`f165c67`](https://github.com/philippe2803/contentmap/commit/f165c67e929ee83b210b2078416a9506c37c66aa))
+
+
 ## v0.3.0 (2024-02-26)
 
 ### Feature
