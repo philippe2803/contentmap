@@ -2,6 +2,17 @@
 
 
 
+## v0.3.0 (2024-02-26)
+
+### Feature
+
+* feat: Add sqlite-vss to add similarity search to sqlite (#4)
+
+* feat: Add sqlite-vss to add simioary search to sqlite
+
+* feat: Integrate with langchain for sqlite-vss implementation ([`5865005`](https://github.com/philippe2803/contentmap/commit/5865005b3e3cba450fcae945d2c25e1e2ee05c64))
+
+
 ## v0.2.0 (2024-01-09)
 
 ### Feature
