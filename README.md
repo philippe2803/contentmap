@@ -2,7 +2,7 @@
 
 A way to share content from a specific domain using SQLite as an alternative to 
 RSS feeds. The purpose of this library is to simply create a dataset for all the
-content on your website, using the XML sitemap as a starting point.
+content on your website, using the XML sitemap as a starting point.  
 
 Possibility to include vector search similarity features in the dataset very easily.
 
