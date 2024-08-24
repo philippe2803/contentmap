@@ -1,6 +1,32 @@
 # CHANGELOG
 
+## v0.5.0 (2024-08-24)
 
+### Feature
+
+* feat: Add more than 1 sitemap and capability to work with xml file ([`f87a3ca`](https://github.com/philippe2803/contentmap/commit/f87a3ca29ce9ba386d2a1df403c9efcefa8432eb))
+
+### Unknown
+
+* Merge pull request #9 from medoror/pull-sitemaps-from-disk
+
+Pull sitemaps from disk ([`b6986a0`](https://github.com/philippe2803/contentmap/commit/b6986a080f54ea18ac515ccd714abd33f237a366))
+
+* Pull sitemaps from disk
+
+* Provide a directory of xml sitemaps on disk as an option
+  to initializing SitemapToContentDatabase
+* Allow for multiple sitemap urls ([`3911e78`](https://github.com/philippe2803/contentmap/commit/3911e78baffb0b69519a1b91e6b19508b85974cd))
+
+* Merge pull request #6 from philippe2803/feature/alex_test
+
+test ([`318412b`](https://github.com/philippe2803/contentmap/commit/318412b3d74e60afc75e32f45baea2f8eed43399))
+
+* test ([`b85be17`](https://github.com/philippe2803/contentmap/commit/b85be175bf94e7e00fd9bae25da5a3b8fd36d031))
+
+* doc: Update README.md
+
+Adding a few more details and a link to article. ([`62ac810`](https://github.com/philippe2803/contentmap/commit/62ac81029063f11b235eed673445424b48c17a49))
 
 ## v0.4.0 (2024-03-05)
 
@@ -18,7 +44,6 @@
 
 * fix: Adjust unit test for similarity search ([`f165c67`](https://github.com/philippe2803/contentmap/commit/f165c67e929ee83b210b2078416a9506c37c66aa))
 
-
 ## v0.3.0 (2024-02-26)
 
 ### Feature
@@ -28,7 +53,6 @@
 * feat: Add sqlite-vss to add simioary search to sqlite
 
 * feat: Integrate with langchain for sqlite-vss implementation ([`5865005`](https://github.com/philippe2803/contentmap/commit/5865005b3e3cba450fcae945d2c25e1e2ee05c64))
-
 
 ## v0.2.0 (2024-01-09)
 
@@ -42,12 +66,7 @@
 
 * fix: column name in test ([`ccbb8fb`](https://github.com/philippe2803/contentmap/commit/ccbb8fbf54faedb92f85ff0dda065c758801f6cb))
 
-
 ## v0.1.1 (2024-01-08)
-
-### Documentation
-
-* docs: starting readme ([`bd798dc`](https://github.com/philippe2803/contentmap/commit/bd798dcc94226b1894163bd58cf0d3e9d599361b))
 
 ### Fix
 
@@ -71,8 +90,11 @@ Testing pypi release ([`d69ee30`](https://github.com/philippe2803/contentmap/com
 
 * Merge branch &#39;main&#39; of github.com:philippe2803/contentmap into main ([`522e1b4`](https://github.com/philippe2803/contentmap/commit/522e1b42a411fb4508bd523fb6e9b4b843e8c3a3))
 
-
 ## v0.1.0 (2024-01-08)
+
+### Documentation
+
+* docs: starting readme ([`bd798dc`](https://github.com/philippe2803/contentmap/commit/bd798dcc94226b1894163bd58cf0d3e9d599361b))
 
 ### Feature
 
