@@ -37,3 +37,5 @@ database.build()
 
 This will automatically create the SQLite database file, with vector search 
 capabilities (piggybacking on sqlite-vss integration on Langchain).
+
+Thanks to @medoror for contributing.
