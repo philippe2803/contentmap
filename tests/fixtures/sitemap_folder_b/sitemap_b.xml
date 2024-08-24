@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.example.com/docs/en/example/?topic=library-overview</loc>
+  </url>
+  <url>
+    <loc>https://www.example.com/docs/en/example/?topic=about-this-content</loc>
+  </url>
+</urlset>

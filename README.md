@@ -27,7 +27,7 @@ following:
 from contentmap.sitemap import SitemapToContentDatabase
 
 database = SitemapToContentDatabase(
-    sitemap_url="https://yourblog.com/sitemap.xml",
+    sitemap_sources=["https://yourblog.com/sitemap.xml"],
     concurrency=10,
     include_vss=True
 )
