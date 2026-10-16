@@ -6,7 +6,7 @@ content on your website, using the XML sitemap as a starting point.
 
 Possibility to include vector search similarity features in the dataset very easily.
 
-Article that explains the rationale behind this type of datasets [here](https://philippeoger.com/pages/can-we-rag-the-whole-web/).
+Article that explains the rationale behind this type of datasets [here](https://philippeoger.com/pages/can-we-rag-the-whole-web).
 
 
 ## Installation
